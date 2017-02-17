@@ -1,0 +1,8 @@
+Clean inodes:
+
+https://github.com/docker/docker/issues/9755
+
+Sometimes docker takes all inodes, this command seems to free loads of them.
+
+docker rmi $(docker images -q -f dangling=true)
+
