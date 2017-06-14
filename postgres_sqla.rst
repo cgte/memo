@@ -55,5 +55,10 @@ select * from pg_enum;
 
 delete from pg_enum where enumabel = 'foobar' -- and so on
 
+
+delete from pg_enum
+    where enumlabel = value_to_remove
+    and enumtypid = (select oid from pg_type where typname = 'enum_type_name')
+
 alter type enum_entity_status add value 'some_new_value' ;
 
