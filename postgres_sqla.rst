@@ -62,3 +62,11 @@ delete from pg_enum
 
 alter type enum_entity_status add value 'some_new_value' ;
 
+Generate sql request with data:
+-------------------------------
+
+
+select 'update table scope set category=''category_' || name || ''' where name =''' || name || ''';' from scope;
+
+where scope has an name attribute.
+
