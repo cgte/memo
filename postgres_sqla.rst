@@ -70,3 +70,11 @@ select 'update table scope set category=''category_' || name || ''' where name =
 
 where scope has an name attribute.
 
+
+Query with Json
+---------------
+
+http://schinckel.net/2014/05/25/querying-json-in-postgres/
+
+
+
